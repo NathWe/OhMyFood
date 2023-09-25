@@ -1,0 +1,10 @@
+{
+    "name": "oh-my-food",
+    "scripts": {
+        "sass": "npx sass style/style.scss style/css/style.css",
+        "sass-watch": "npx sass --watch style/style.scss style/css/style.css"
+    },
+    "dependencies": {
+        "sass": "^1.68.0"
+    }
+}

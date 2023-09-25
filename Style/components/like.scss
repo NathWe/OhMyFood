@@ -1,14 +1,14 @@
 .like {
-    font-size: 40px;
+    font-size: 22px;
     cursor: pointer;
     position: relative;
+    top: 20%;
     
     .fa-heart {
       position: absolute;
-  
     }
-  
   }
+
   .like-solid {
     color: transparent;
     background-clip: text;

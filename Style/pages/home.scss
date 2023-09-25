@@ -1,3 +1,4 @@
+
 /*Search*/
 
 .search {
@@ -22,7 +23,7 @@
 
       .title {
         padding-left: 20px;
-        font-weight: bold;
+        padding-top: 30px;
       }
       
       /*Header*/
@@ -36,13 +37,15 @@
         background-color: #f7f7f7;
       
         h2 {
-            font-size: 30px;
+            font-size: 24px;
             text-align: center;
-            margin: 10px;
+            margin: 50px;
           }
         
           p {
-            font-size: 18px;
+            font-size: 17px;
+            font-weight: 300;
+            color: #353535;
             text-align: center;
             margin: 10px;
           }
@@ -52,7 +55,6 @@
             text-decoration: none;
             background: linear-gradient($color-secondary, $color-primary);
             color: #fff;
-            font-size: 20px;
             border-radius: 50px;
             border: none;
             padding: 20px;
@@ -60,7 +62,7 @@
             box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
             
             &:hover {
-              box-shadow: rgba(149, 157, 165, 0,3) 0px 8px 24px;
+              box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
               
             }
           } 
@@ -69,29 +71,51 @@
 
           .fonctionnement {
             padding-bottom: 30px;
+            background-color: #ffffff;
           }
-
           .slide {
             height: 250px;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            align-items: center;
-            list-style-type: none;
+            list-style: none;
 
+          
             .btn-slide {
-                position: relative;
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                background-color: #e7e7e7;
-                padding: 20px;
-                width: 80%;
-                border-radius: 20px;
-                border: none;
-                font-weight: bold;
-                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-                cursor: pointer;
-
+              font-size: 16px;
+              position: relative;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              background-color:#F6F6F6;
+              padding: 25px;
+              width: 95%;
+              border-radius: 20px;
+              border: none;
+              box-shadow: rgba(149, 157, 165, 0.3) 8px 8px 24px;
+              cursor: pointer;
+              i {
+                padding-right: 15px;
+                color: #7E7E7E;
+              }
+              &:hover {
+                i {
+                  color: $color-primary;
+                }
+              }
             }
-        }
+            .btn-slide::before {
+              content: attr(value);
+              width: 20px;
+              height: 20px;
+              background-color: $color-primary;
+              color: #FFF;
+              border-radius: 50%;
+              position: absolute;
+              left: -10px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        

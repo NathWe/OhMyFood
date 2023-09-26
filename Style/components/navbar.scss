@@ -1,28 +1,35 @@
 nav {
-    padding: 7px;
+  padding: 7px;
+  display: flex;
+  align-items: center;
+
+  img.logo {
+    width: 10rem;
+  }
+}
+
+.navhome-container {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.navmenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+
+  .back {
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    margin-left: 20px;
+  }
+  .logo-container {
     display: flex;
     align-items: center;
-  
-    img {
-      width: 15rem;
-    }
-  }
-  
-  .navhome-container {
-    display: flex;
-    justify-content: center;
     margin: 0;
   }
-
-  
-  .navmenu {
-    justify-content: center;
-    img {
-      padding-left: 0%;
-    }
-    .back {
-      color: black;
-      font-size: 2rem;
-      left: 0;
-    }
-  }
+}

@@ -1,10 +1,13 @@
 @import "global.scss";
 @import "variable/colors.scss";
 
-@import "pages/home.scss";
-
 
 @import "components/navbar.scss";
 @import "components/footer.scss";
 @import "components/restaurant.scss";
 @import "components/like.scss";
+@import "components/menu-btn.scss";
+
+@import "pages/home.scss";
+@import "pages/menu.scss";
+

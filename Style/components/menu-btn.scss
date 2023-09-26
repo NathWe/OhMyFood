@@ -1,0 +1,62 @@
+.menu-btn {
+  overflow: hidden;
+  margin: 10px;
+  display: flex;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: rgba(149, 157, 165, 0.3) 8px 8px 24px;
+
+  .title-menu {
+    display: block;
+    width: 100px;
+    flex: 1;
+    padding: 10px;
+  }
+  h3,
+  p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    margin: 5px;
+  }
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  p {
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .prix {
+    display: flex;
+    font-weight: 700;
+    font-size: 15px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 10px;
+    padding-bottom: 13px;
+  }
+  .menu-btn-check {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 4rem;
+    margin: 0rem -4rem 0rem 0rem;
+    background-color: $color-tertiaire;
+    transition: 1s;
+  }
+  &:hover .menu-btn-check {
+    margin: 0rem 0rem 0rem 0rem;
+  }
+  .check {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
+  &:hover .check {
+    transition: 1s;
+    transform: rotate(360deg);
+  }
+}

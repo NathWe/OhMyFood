@@ -1,77 +1,76 @@
-.restaurant-list{
+.restaurant-list {
+  padding: 20px;
+  padding-top: 0px;
+  padding-bottom: 50px;
+  margin-bottom: 0px;
 
-    padding: 20px;
-    padding-top: 0px;
-    padding-bottom: 30px;
+  .restaurant {
+    text-decoration: none;
+    padding-bottom: 45px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
 
-
-    .restaurant {
-        text-decoration: none;
-        padding-bottom: 45px;
-        height: 250px;
-        display: flex;
-        flex-direction: column;
-
-        a {
-            text-decoration: none;
-            color: black;
-        }
-
-        .restaurant-img {
-            width: 100%;
-            height: 200px;
-            border-radius: 20px 20px 0 0;
-            object-fit: cover;
-        }
-
-
-        .restaurant-info {
-            display: flex;
-            padding-bottom: 30px;
-            padding: 10px;
-            height: 100%;
-            background-color: #fff;
-            list-style: none;
-            border-radius: 0 0 20px 20px;
-            justify-content: space-between;
-
-            .info-text {
-                h3 {
-                    padding: 0;
-                    margin: 0;
-                    font-size: 18px;
-                    font-weight: 700;
-                }
-                p {
-                    padding: 0;
-                    padding-bottom: 10px;
-                    margin: 0;
-                    font-size: 17px;
-                    font-weight: 300;
-                }
-            }
-
-            .like {
-                padding-right: 15%;
-            }
-        }
+    a {
+      text-decoration: none;
+      color: black;
+      height: 200px;
     }
+
+    .restaurant-img {
+      width: 100%;
+      height: 200px;
+      border-radius: 20px 20px 0 0;
+      object-fit: cover;
+    }
+
+    .restaurant-info {
+      display: flex;
+      padding-bottom: 30px;
+      padding: 10px;
+      height: 100%;
+      background-color: #fff;
+      list-style: none;
+      border-radius: 0 0 20px 20px;
+      justify-content: space-between;
+
+      .info-text {
+        h3 {
+          padding: 0;
+          margin: 0;
+          font-size: 18px;
+          font-weight: 700;
+        }
+        p {
+          padding: 0;
+          padding-bottom: 10px;
+          margin: 0;
+          font-size: 17px;
+          font-weight: 300;
+        }
+      }
+
+      .like {
+        padding-right: 10%;
+      }
+    }
+  }
 }
 
 .new {
-    position: relative;
+  position: relative;
 }
 
 .new::before {
-    content: "Nouveau";
-    position: absolute;
-    height: 2rem;
-    width: 5rem;
-    background-color: $color-tertiaire;
-    color: #008766;
-    display: grid;
-    place-items: center;
-    top: 1rem;
-    right: 1rem;
-
+  content: "Nouveau";
+  position: absolute;
+  font-size: 14px;
+  height: 2rem;
+  width: 5rem;
+  background-color: $color-tertiaire;
+  color: #008766;
+  display: grid;
+  place-items: center;
+  top: 1rem;
+  right: 1rem;
 }

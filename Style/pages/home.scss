@@ -1,121 +1,180 @@
-
 /*Search*/
 
 .search {
-    padding: 13px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  padding: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eaeaea;
+  font-size: 20px;
+  color: #353535;
+
+  .location {
+    padding-right: 0px;
+  }
+
+  input {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #353535;
+    border: none;
+    outline: none;
     background-color: #eaeaea;
-    font-size: 20px;
+  }
+}
 
-    .location {
-        padding-right: 1%;
+.title {
+  padding-left: 20px;
+  padding-top: 30px;
+}
+
+/*Header*/
+
+.container {
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f7f7;
+
+  h2 {
+    padding-top: 30px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 300;
+    color: #353535;
+    text-align: center;
+    margin: 10px;
+  }
+}
+
+.btn {
+  text-decoration: none;
+  background: linear-gradient($color-secondary, $color-primary);
+  font-size: 16px;
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  padding: 15px;
+  margin: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  &:hover {
+    box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+  }
+}
+
+/*Fonctionnement*/
+
+.fonctionnement {
+  background-color: #ffffff;
+}
+.slide {
+  height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style: none;
+  padding-bottom: 30px;
+}
+.btn-slide {
+  font-size: 16px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #f6f6f6;
+  padding: 25px;
+  width: 95%;
+  border-radius: 20px;
+  border: none;
+  box-shadow: rgba(149, 157, 165, 0.3) 8px 8px 24px;
+  cursor: pointer;
+  i {
+    padding-right: 15px;
+    color: #7e7e7e;
+  }
+  &:hover {
+    i {
+      color: $color-primary;
+    }
+  }
+}
+.btn-slide::before {
+  content: attr(value);
+  width: 20px;
+  height: 20px;
+  background-color: $color-primary;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.restaurants {
+  background-color: #f6f6f6;
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .fonctionnement {
+    padding-left: 180px;
+    padding-right: 180px;
+    padding-bottom: 30px;
+    margin: auto;
+
+    .slide {
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      height: 50px;
+      padding: 0;
+      margin: 0;
+      padding-left: 10px;
+      flex-grow: 1;
+    }
+  }
+  .slide .btn-slide {
+    margin-left: 20px;
+    width: 335px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .restaurants {
+    padding-left: 180px;
+    padding-right: 150px;
+    background-color: #f6f6f6;
+  }
+  .restaurant-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .restaurant {
+      width: calc(50% - 10px);
+      max-width: 490px;
+      margin-bottom: 20px;
+      .restaurant-card {
+        width: 80%;
+        max-width: 490px;
+        height: 251px;
       }
-
-      input {
-        text-align: center;
-        font-size: 1rem;
-        border: none;
-        background-color: #eaeaea;
-       }
-      }
-
-      .title {
-        padding-left: 20px;
-        padding-top: 30px;
-      }
-      
-      /*Header*/
-
-      .container {
-        height: 350px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: #f7f7f7;
-      
-        h2 {
-            font-size: 24px;
-            text-align: center;
-            margin: 50px;
-          }
-        
-          p {
-            font-size: 17px;
-            font-weight: 300;
-            color: #353535;
-            text-align: center;
-            margin: 10px;
-          }
-        }
-
-        .btn {
-            text-decoration: none;
-            background: linear-gradient($color-secondary, $color-primary);
-            color: #fff;
-            border-radius: 50px;
-            border: none;
-            padding: 20px;
-            margin: 20px;
-            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-            
-            &:hover {
-              box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
-              
-            }
-          } 
-
-          /*Fonctionnement*/
-
-          .fonctionnement {
-            padding-bottom: 30px;
-            background-color: #ffffff;
-          }
-          .slide {
-            height: 250px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            list-style: none;
-
-          
-            .btn-slide {
-              font-size: 16px;
-              position: relative;
-              display: flex;
-              justify-content: flex-start;
-              align-items: center;
-              background-color:#F6F6F6;
-              padding: 25px;
-              width: 95%;
-              border-radius: 20px;
-              border: none;
-              box-shadow: rgba(149, 157, 165, 0.3) 8px 8px 24px;
-              cursor: pointer;
-              i {
-                padding-right: 15px;
-                color: #7E7E7E;
-              }
-              &:hover {
-                i {
-                  color: $color-primary;
-                }
-              }
-            }
-            .btn-slide::before {
-              content: attr(value);
-              width: 20px;
-              height: 20px;
-              background-color: $color-primary;
-              color: #FFF;
-              border-radius: 50%;
-              position: absolute;
-              left: -10px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
-          }
-        
+    }
+  }
+}

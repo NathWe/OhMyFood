@@ -15,7 +15,11 @@
   margin-top: -80px;
   margin-bottom: 0;
   list-style: none;
+  max-width: 750px;
+  margin: 0 auto;
+  margin-top: -50px;
   h2 {
+    padding-top: 20px;
     font-weight: 300;
     font-size: 16px;
     position: relative;
@@ -59,12 +63,19 @@
     }
   }
 
+  .menu-box {
+    .menu-container {
+      @include cascade-delay;
+      animation: fadeIn 0.5s both;
+    }
+  }
+
   .order {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 40px;
   }
 
   .btn-order {
@@ -79,5 +90,31 @@
     &:hover {
       box-shadow: rgba(149, 157, 165, 2) 0px 16px 40px;
     }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-list {
+    display: block;
+    text-align: center;
+    .like {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .menu-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .menu-container {
+    font-size: 15px;
+  }
+
+  .menu {
+    padding-left: 180px;
+    padding-right: 180px;
+    padding-bottom: 20px;
   }
 }

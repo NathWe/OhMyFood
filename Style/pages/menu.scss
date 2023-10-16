@@ -41,10 +41,7 @@
   }
 
   .menu-list {
-    padding-left: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: 1px 10px;
 
     img {
       width: 20px;
@@ -55,18 +52,14 @@
       font-family: "Shrikhand", cursive;
       font-size: 28px;
       font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .like {
       padding-right: 4rem;
       padding-bottom: 1rem;
-    }
-  }
-
-  .menu-box {
-    .menu-container {
-      @include cascade-delay;
-      animation: fadeIn 0.5s both;
     }
   }
 
@@ -94,18 +87,16 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .menu-list {
-    display: block;
-    text-align: center;
-    .like {
-      display: inline-block;
-      vertical-align: middle;
+  .menu {
+    .menu-list {
+      h1 {
+        justify-content: center;
+      }
+
+      .like {
+        margin-left: 24px;
+      }
     }
-  }
-  .menu-box {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
   }
 
   .menu-container {
@@ -116,5 +107,21 @@
     padding-left: 180px;
     padding-right: 180px;
     padding-bottom: 20px;
+  }
+}
+
+li.menu-btn {
+  animation: fadeIn 0.8s both;
+}
+
+@for $i from 1 through 4 {
+  @for $j from 1 through 9 {
+    .menu-section:nth-child(#{$i}) {
+      li.menu-btn:nth-of-type(#{$j}) {
+        // Je ne sais pas pourquoi, .menu-section:nth-child(1) n'existe pas
+        // Pour cela que je met $i - 2 et non pas $i - 1
+        animation-delay: 200ms * $j + 600ms * ($i - 2);
+      }
+    }
   }
 }

@@ -72,10 +72,7 @@ footer {
   /* Mettre en gras les deux premières lignes */
 }
 footer .footer-logo {
-  left: 0;
-  top: 0;
   padding: 10px;
-  color: #fff;
 }
 footer .logo-title {
   font-family: "Shrikhand", cursive;
@@ -182,6 +179,7 @@ footer li:nth-child(-n+2) a {
 }
 .restaurant-list .restaurant .restaurant-info .like {
   padding-right: 10%;
+  top: 20%;
 }
 
 .new {
@@ -206,7 +204,7 @@ footer li:nth-child(-n+2) a {
   font-size: 22px;
   cursor: pointer;
   position: relative;
-  top: 20%;
+  display: inline-block;
 }
 .like .fa-heart {
   position: absolute;
@@ -217,10 +215,11 @@ footer li:nth-child(-n+2) a {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-image: linear-gradient(#ff79da, #9356dc);
   transition: opacity 0.5s ease-in-out;
 }
-.like-solid:hover, .like-solid .like-solid {
+.like-solid:hover,
+.like-solid .like-solid {
   opacity: 1;
 }
 
@@ -596,10 +595,7 @@ footer li:nth-child(-n+2) a {
   padding-left: 0;
 }
 .menu .menu-list {
-  padding-left: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 1px 10px;
 }
 .menu .menu-list img {
   width: 20px;
@@ -609,25 +605,13 @@ footer li:nth-child(-n+2) a {
   font-family: "Shrikhand", cursive;
   font-size: 28px;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .menu .menu-list .like {
   padding-right: 4rem;
   padding-bottom: 1rem;
-}
-.menu .menu-box .menu-container {
-  animation: fadeIn 0.5s both;
-}
-.menu .menu-box .menu-container:nth-child(1) {
-  animation-delay: 500ms;
-}
-.menu .menu-box .menu-container:nth-child(2) {
-  animation-delay: 1000ms;
-}
-.menu .menu-box .menu-container:nth-child(3) {
-  animation-delay: 1500ms;
-}
-.menu .menu-box .menu-container:nth-child(4) {
-  animation-delay: 2000ms;
 }
 .menu .order {
   position: relative;
@@ -650,18 +634,11 @@ footer li:nth-child(-n+2) a {
 }
 
 @media screen and (min-width: 1024px) {
-  .menu-list {
-    display: block;
-    text-align: center;
-  }
-  .menu-list .like {
-    display: inline-block;
-    vertical-align: middle;
-  }
-  .menu-box {
-    display: flex;
-    flex-direction: row;
+  .menu .menu-list h1 {
     justify-content: center;
+  }
+  .menu .menu-list .like {
+    margin-left: 24px;
   }
   .menu-container {
     font-size: 15px;
@@ -671,6 +648,153 @@ footer li:nth-child(-n+2) a {
     padding-right: 180px;
     padding-bottom: 20px;
   }
+}
+li.menu-btn {
+  animation: fadeIn 0.8s both;
+}
+
+.menu-section:nth-child(1) li.menu-btn:nth-of-type(1) {
+  animation-delay: -400ms;
+}
+
+.menu-section:nth-child(1) li.menu-btn:nth-of-type(2) {
+  animation-delay: -200ms;
+}
+
+.menu-section:nth-child(1) li.menu-btn:nth-of-type(3) {
+  animation-delay: 0ms;
+}
+
+.menu-section:nth-child(1) li.menu-btn:nth-of-type(4) {
+  animation-delay: 200ms;
+}
+
+.menu-section:nth-child(1) li.menu-btn:nth-of-type(5) {
+  animation-delay: 400ms;
+}
+
+.menu-section:nth-child(1) li.menu-btn:nth-of-type(6) {
+  animation-delay: 600ms;
+}
+
+.menu-section:nth-child(1) li.menu-btn:nth-of-type(7) {
+  animation-delay: 800ms;
+}
+
+.menu-section:nth-child(1) li.menu-btn:nth-of-type(8) {
+  animation-delay: 1000ms;
+}
+
+.menu-section:nth-child(1) li.menu-btn:nth-of-type(9) {
+  animation-delay: 1200ms;
+}
+
+.menu-section:nth-child(2) li.menu-btn:nth-of-type(1) {
+  animation-delay: 200ms;
+}
+
+.menu-section:nth-child(2) li.menu-btn:nth-of-type(2) {
+  animation-delay: 400ms;
+}
+
+.menu-section:nth-child(2) li.menu-btn:nth-of-type(3) {
+  animation-delay: 600ms;
+}
+
+.menu-section:nth-child(2) li.menu-btn:nth-of-type(4) {
+  animation-delay: 800ms;
+}
+
+.menu-section:nth-child(2) li.menu-btn:nth-of-type(5) {
+  animation-delay: 1000ms;
+}
+
+.menu-section:nth-child(2) li.menu-btn:nth-of-type(6) {
+  animation-delay: 1200ms;
+}
+
+.menu-section:nth-child(2) li.menu-btn:nth-of-type(7) {
+  animation-delay: 1400ms;
+}
+
+.menu-section:nth-child(2) li.menu-btn:nth-of-type(8) {
+  animation-delay: 1600ms;
+}
+
+.menu-section:nth-child(2) li.menu-btn:nth-of-type(9) {
+  animation-delay: 1800ms;
+}
+
+.menu-section:nth-child(3) li.menu-btn:nth-of-type(1) {
+  animation-delay: 800ms;
+}
+
+.menu-section:nth-child(3) li.menu-btn:nth-of-type(2) {
+  animation-delay: 1000ms;
+}
+
+.menu-section:nth-child(3) li.menu-btn:nth-of-type(3) {
+  animation-delay: 1200ms;
+}
+
+.menu-section:nth-child(3) li.menu-btn:nth-of-type(4) {
+  animation-delay: 1400ms;
+}
+
+.menu-section:nth-child(3) li.menu-btn:nth-of-type(5) {
+  animation-delay: 1600ms;
+}
+
+.menu-section:nth-child(3) li.menu-btn:nth-of-type(6) {
+  animation-delay: 1800ms;
+}
+
+.menu-section:nth-child(3) li.menu-btn:nth-of-type(7) {
+  animation-delay: 2000ms;
+}
+
+.menu-section:nth-child(3) li.menu-btn:nth-of-type(8) {
+  animation-delay: 2200ms;
+}
+
+.menu-section:nth-child(3) li.menu-btn:nth-of-type(9) {
+  animation-delay: 2400ms;
+}
+
+.menu-section:nth-child(4) li.menu-btn:nth-of-type(1) {
+  animation-delay: 1400ms;
+}
+
+.menu-section:nth-child(4) li.menu-btn:nth-of-type(2) {
+  animation-delay: 1600ms;
+}
+
+.menu-section:nth-child(4) li.menu-btn:nth-of-type(3) {
+  animation-delay: 1800ms;
+}
+
+.menu-section:nth-child(4) li.menu-btn:nth-of-type(4) {
+  animation-delay: 2000ms;
+}
+
+.menu-section:nth-child(4) li.menu-btn:nth-of-type(5) {
+  animation-delay: 2200ms;
+}
+
+.menu-section:nth-child(4) li.menu-btn:nth-of-type(6) {
+  animation-delay: 2400ms;
+}
+
+.menu-section:nth-child(4) li.menu-btn:nth-of-type(7) {
+  animation-delay: 2600ms;
+}
+
+.menu-section:nth-child(4) li.menu-btn:nth-of-type(8) {
+  animation-delay: 2800ms;
+}
+
+.menu-section:nth-child(4) li.menu-btn:nth-of-type(9) {
+  animation-delay: 3000ms;
 }
 
 /*# sourceMappingURL=style.css.map */

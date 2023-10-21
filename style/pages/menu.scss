@@ -113,15 +113,3 @@
 li.menu-btn {
   animation: fadeIn 0.8s both;
 }
-
-@for $i from 1 through 4 {
-  @for $j from 1 through 9 {
-    .menu-section:nth-child(#{$i}) {
-      li.menu-btn:nth-of-type(#{$j}) {
-        // Je ne sais pas pourquoi, .menu-section:nth-child(1) n'existe pas
-        // Pour cela que je met $i - 2 et non pas $i - 1
-        animation-delay: 200ms * $j + 600ms * ($i - 2);
-      }
-    }
-  }
-}
